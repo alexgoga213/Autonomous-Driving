@@ -1,0 +1,16 @@
+# Training / inference outputs
+runs/
+*.pt
+!assets/*.pt
+
+# Datasets (too large for git)
+datasets/
+configs/data.yaml
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/

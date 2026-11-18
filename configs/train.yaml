@@ -1,0 +1,26 @@
+# Training hyperparameters passed straight to Ultralytics `model.train(...)`.
+# Any key here can also be overridden from the command line.
+
+epochs: 50
+imgsz: 640
+batch: -1            # -1 = auto batch size that fits in memory
+patience: 15         # early stopping if val mAP does not improve
+optimizer: auto
+cos_lr: true         # cosine learning-rate schedule
+close_mosaic: 10     # turn off mosaic for the last epochs for cleaner fine-tuning
+
+# --- Augmentation tuned for traffic signs ---
+fliplr: 0.0          # NO horizontal flip: mirrored digits ("07" instead of "70") would teach wrong labels
+flipud: 0.0
+degrees: 5.0         # small rotations: signs are seen slightly tilted
+translate: 0.1
+scale: 0.5           # signs appear at very different distances
+hsv_h: 0.015
+hsv_s: 0.6
+hsv_v: 0.4           # brightness changes: day / dusk / shadows
+mosaic: 1.0
+mixup: 0.0           # mixing images would blend red/green lights, so it stays off
+
+plots: true
+seed: 42
+deterministic: true

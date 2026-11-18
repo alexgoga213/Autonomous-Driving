@@ -1,0 +1,12 @@
+[project]
+name = "traffic-ai"
+version = "1.0.0"
+description = "Traffic sign & traffic light detection with YOLOv8 and a temporal driving-decision layer"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
